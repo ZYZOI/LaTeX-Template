@@ -1,0 +1,86 @@
+\documentclass{beamer}
+
+% 这是一段注释
+
+% 导言区
+
+\usepackage{xeCJK}
+
+\title{这是中文标题}
+\author{Author}
+\institute{ZYZOI}
+\date{May 21st, 2020}
+
+% https://hartwork.org/beamer-theme-matrix/
+
+\usetheme{CambridgeUS}
+\usecolortheme{seahorse}
+
+% 每个部分的开头添加目录
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+  % 显示标题页
+  \frame{\titlepage}
+
+  \begin{frame}
+    \frametitle{Content}
+    \tableofcontents % 显示目录
+  \end{frame}
+
+  \section{First Part}
+
+    \subsection{Beamer}
+
+    \begin{frame}
+      \frametitle{Title 1}
+      Text 1
+    \end{frame}
+
+    \subsection{pause}
+
+    \begin{frame}
+      \frametitle{Title 2}
+      Text 1 \\
+      \pause
+      Text 2 \pause\ Text 3
+    \end{frame}
+
+    \subsection{Block}
+
+    \begin{frame}
+      \frametitle{Block}
+
+      \begin{block}{Title 1}
+        Text 1
+      \end{block}
+
+      \begin{block}{Title 2}
+        Text 2
+      \end{block}
+
+      \begin{block}
+        Text 3
+      \end{block}
+    \end{frame}
+
+  \section{Second Part}
+
+    \subsection{Math}
+
+    \begin{frame}
+      \frametitle{Math}
+
+      \TeX\ \& \LaTeX\ \& \LaTeX2e\ % \KaTeX
+
+      $$\sum_{i = 1} ^ {n} i ^ 2 = \frac{n (n + 1) (2n + 1)}{6}$$
+
+    \end{frame}
+
+\end{document}
